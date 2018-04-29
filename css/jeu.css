@@ -1,0 +1,109 @@
+           
+           /*## GENERALE ##*/
+
+body{ 
+    background-image: url("../img/fond.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: 2em;
+    font-family: 'Bangers', cursive;
+}
+
+p{
+    margin: 0.8ex;
+}
+
+.cartes{
+    width: 3em;
+    height: 5em;
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 0.3ex;
+}
+
+
+            /*## PAR ZONE ##*/
+
+#mainBanque, #mainJoueur, #zoneSabot, #zoneBtn, #message{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+            /*## MAIN ##*/
+
+#mainBanque, #mainJoueur{
+    justify-content: center;
+    height: 5em;
+    margin-bottom: 0.2ex;
+}
+
+
+            /*## SCORE ##*/
+
+#scoreJoueur, #scoreBanque{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+            /*## BOUTTON ##*/
+
+button{
+    width: 6em;
+    height: 3em;
+    box-shadow: 3px 5px 5px 3px black;
+    font-weight: bold;
+    font-family: 'Audiowide', cursive !important;
+    font-size: 0.8ex !important;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: scale(1.06);
+}
+
+button:active{
+    transform: scale(1.0);
+}
+
+#btnReset{
+    width: 7em;
+}
+
+#zoneBtn{
+    justify-content: center;
+    height: 2em;
+}
+
+#zoneBtn>div{
+    margin: 3px;
+}
+
+#btnDeal, #btnHit, #btnStand{
+    border-radius: 5px;
+}
+
+#zoneReset{
+    height: 2em;
+}
+
+
+            /*## MESSAGE ##*/
+
+#message{
+    width: 100%;
+    height: 0.8em;  
+    letter-spacing: 1.2px;  
+}
+
+#zoneMessage{
+    color: rgb(115, 155, 230);
+    margin: auto;
+    font-weight: bold;
+}
+
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>BlackJack</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Audiowide|Bangers" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/jeu.css" />
+    </head>
+    <body>
+        <header id="zoneReset">
+            <button id="btnReset">RESET</button>
+        </header>
+        
+        <section id="scoreBanque">
+            <p>Gagnée(s) : <span id="nbPartieBanque">0</span></p>
+            <p>BANQUIER</p>
+            <p><span id="ptsMainBanque">0</span> point(s)</p>
+        </section>
+        
+        <section id="mainBanque">
+        <!-- zone où le banquier recoit les cartes -->
+        </section>
+        
+        <section id="message">
+            <p id="zoneMessage">!!! Appuyer sur DEAL pour demarrer une partie !!!</p>
+        </section>
+        
+        <section id="scoreJoueur">
+            <p>Gagnée(s) : <span id="nbPartieJoueur">0</span></p>
+            <P>JOUEUR</P>
+            <p><span id="ptsMainJoueur">0</span> point(s)</p>
+        </section>
+        
+        <section id="mainJoueur">
+            <!-- zone où le joueur recoit les cartes -->
+        </section>
+            
+        <footer id="zoneBtn">    
+            <div><button id="btnDeal">DEAL</button></div>
+            <div><button id="btnHit">HIT</button></div>
+            <div><button id="btnStand">STAND</button></div>
+        </footer>
+        
+        <script type="text/javascript" src="js/function_variable.js"></script>
+        <script type="text/javascript" src="js/programme.js"></script>
+    </body>
+</html>
