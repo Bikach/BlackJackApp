@@ -133,6 +133,23 @@ function sommePts(pointDistribue, utilisateur){
     }
 }
 
+// recevoir une carte
+function hit(utilisateur) {
+    //distribue au joueur
+    utilisateur.carteRecu = distribCarte(sabot.length, utilisateur)
+    //ajout de l'img carte IHM
+    var imgCarte = creeCarte(joueur.carteRecu);
+    if (utilisateur == joueur) {
+        mainJoueur.appendChild(imgCarte);
+    } else {
+        mainBanque.appendChild(imgCarte);
+    }
+    //calcul la somme 
+    sommePts(utilisateur.pointRecu, utilisateur);
+}
+
+
+// Affiche les points à l'écran 
 function spanPoint(utilisateur) {
     if (utilisateur == joueur) {
         affichePtsJoueur.textContent = joueur.ptsMain;

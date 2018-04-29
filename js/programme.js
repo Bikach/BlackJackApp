@@ -24,13 +24,7 @@ btnDeal.addEventListener("click", function (e) {
         //calcul la somme
         sommePts(banquier.pointRecu, banquier);
         
-        //distribue au joueur
-        joueur.carteRecu = distribCarte(sabot.length, joueur)
-        //ajout de l'img carte IHM
-        var imgCarte = creeCarte(joueur.carteRecu);
-        mainJoueur.appendChild(imgCarte);
-        //calcul la somme 
-        sommePts(joueur.pointRecu, joueur);
+        hit(joueur);
         spanPoint(joueur);
     }  
 
@@ -44,14 +38,7 @@ btnDeal.addEventListener("click", function (e) {
 
 //pour prendre une carte
 btnHit.addEventListener('click', function () {
-    
-    //distribue au joueur
-    joueur.carteRecu = distribCarte(sabot.length, joueur)
-    //ajout de l'img carte IHM
-    var imgCarte = creeCarte(joueur.carteRecu);
-    mainJoueur.appendChild(imgCarte);
-    //calcul la somme 
-    sommePts(joueur.pointRecu, joueur);
+    hit(joueur);
     spanPoint(joueur);
 });
 
@@ -60,23 +47,15 @@ btnHit.addEventListener('click', function () {
 btnStand.addEventListener('click', function () {
 
     // replace les faces des deux premieres cartes que le banquier a reçu
-   
     var y = -1;
     for (var i = 0; i < mainBanque.children.length; i++) {        
         mainBanque.children[i].setAttribute('src', banquier.premsMain[++y])
     }
     
     while (banquier.ptsMain <= seuil && joueur.ptsMain <= blackJack) {
+        hit(banquier);
+    }   
 
-        //distribue au banquier
-        banquier.carteRecu = distribCarte(sabot.length, banquier);
-        //ajout de l'img carte IHM
-        var imgCarte = creeCarte(banquier.carteRecu);
-        mainBanque.appendChild(imgCarte);
-        //calcul la somme
-        sommePts(banquier.pointRecu, banquier);
-        
-    }    
     spanPoint(banquier);
     vainqueur();
 
